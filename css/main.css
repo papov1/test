@@ -1,0 +1,97 @@
+﻿ul li {
+  list-style: none;
+}
+.row {
+    margin-top: 20px;
+}
+.col-sm-4 {
+    height:335px;
+}
+.col-sm-9 {
+    width: 100%;
+}
+.container {
+    width: 100%;
+}
+a:hover {
+outline: none;
+text-decoration:none;
+}
+.pstrnav{
+	height: 30px;
+	margin-top: 20px;
+}
+.pstrnav li{
+	width: 26px;
+	height: 26px;
+	margin-left: 7px;
+	display: inline-block;
+	margin-top: 3px;
+	}
+.pstrnav a{
+	display: block;
+	text-decoration: none;
+	font: bold 14px sans-serif;
+	text-align: center;
+	background: #d6d6d6;
+	padding-top: 5px;
+	padding-bottom: 5px;
+		}	
+.pstrnav a:hover{
+	background: #6f5e5e;
+		}	
+.pstrnav a:active{
+	background: #564c4c;
+	color: white;
+}
+.pstrnav a.pstr-active{
+	background: #564c4c;
+	color: white;
+}	
+.pstrnav p.nav-point{
+	text-align: center;
+	font: bold 14px sans-serif;
+	padding-top: 8px;
+	padding-bottom: 0px;
+}
+h2.title {
+  color: #FE980F;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 15px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.productinfo h2{
+	color: #FE980F;
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+}
+.productinfo p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #696763;
+}
+
+.productinfo img{
+  width: 100%;
+}
+
+.productinfo{
+ position:relative;
+}
+@media only screen and (max-width : 767px) {.col-sm-4 { height: auto;}}
+
+
+
+
+
+
+
+
+
