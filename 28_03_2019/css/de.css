@@ -1,0 +1,7 @@
+#contact_content .btr-accept-ui:before {
+  content: "NEIN" !important;
+}
+
+#contact_content .btr-accept-ui.agreement_checked:before {
+  content: "JA" !important;
+}

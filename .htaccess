@@ -1,0 +1,9 @@
+RewriteEngine On
+ RewriteCond %{HTTPS} !=on
+ RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+
+Options -Indexes
+Options +FollowSymlinks
+RewriteEngine On
+RewriteRule ^safety-sheets/([^/]+) index.php?id=$1 [NC]
+RewriteRule ^pre/([^/]+) index.php?pre=$1 [NC]
