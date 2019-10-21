@@ -2045,7 +2045,7 @@ div.flag img {
 .section.calculator_section{
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	/* justify-content: center; */
 	flex-wrap: wrap;
 	align-content: center;
 }
