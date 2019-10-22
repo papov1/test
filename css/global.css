@@ -695,8 +695,14 @@ body{
 	cursor: default;
 	display: none;
 	z-index: 12;
+	/* left: calc(50% - 275px); */
 }
-
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (min-width : 1280px){
+ /* IE10 IE11 до 768px по ширине*/
+ #download_manager_content{
+ 	left: calc(50% - 275px);
+ }
+}
 #download_manager_content .download_manager_content_in{
 	background: #fff;
 	border: 1px solid #808080;
@@ -1193,7 +1199,7 @@ body{
 	-o-filter: blur(15px);
 	-ms-filter: blur(15px);
 	filter: blur(15px);
-	opacity: 1;
+	opacity: 0;
 	/*transition: 0.1s -webkit-filter linear;*/
 }
 
@@ -2818,7 +2824,7 @@ div.flag img {
   .hidemobile{
     display: none !important;
   }
-  #suche,
+  /* #suche, */
   #ubersicht,
   #kontakt,
   #rechner{

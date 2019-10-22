@@ -45,7 +45,8 @@ $translation = getTranslation($_SESSION['lang']);
 		<link rel="stylesheet" type="text/css" href="css/flipbook.style.css">
 		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 		<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two&amp;subset=latin-ext" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/simplebar.css">
+		<!-- <link rel="stylesheet" type="text/css" href="css/simplebar.css"> -->
+		<link rel="stylesheet" type="text/css" href="css/simplebar3.1.0.css">
 
 		<?php
 			if($_SESSION['lang'] == 1){
@@ -55,6 +56,11 @@ $translation = getTranslation($_SESSION['lang']);
 				echo '<link rel="stylesheet" type="text/css" href="css/en.css">';
 			}
 		?>
+
+		<!-- IE -->
+		<!-- <script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+		<script type="text/javascript" src="js/es6-promise"></script> -->
+		<!-- IE -->
 
 		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 		<script type="text/javascript" src="js/custom.js"></script>
@@ -66,7 +72,10 @@ $translation = getTranslation($_SESSION['lang']);
 		<script type="text/javascript" src="js/flipbook.min.js"></script>
 		<script type="text/javascript" src="js/js.cookie.js"></script>
 		<script type="text/javascript" src="js/gaseumrechner.js"></script>
-		<script type="text/javascript" src="js/simplebar.js"></script>
+		<!-- <script type="text/javascript" src="js/simplebar.js"></script> -->
+		<script type="text/javascript" src="js/simplebar3.1.0.js"></script>
+		<script type="text/javascript" src="js/pdf.min.js"></script>
+		<script type="text/javascript" src="js/pdf.worker.min.js"></script>
 	</head>
 
 	<body>

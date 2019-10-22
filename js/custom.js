@@ -13,14 +13,26 @@ $(document).ready(function() {
 					document.location = save.href; 
 	// window event not working here
 				}else{
-							var evt = new MouseEvent('click', {
+					//This is true only for IE,firefox
+					if(document.createEvent){
+						// To create a mouse event , first we need to create an event and then initialize it.
+						evt = document.createEvent("MouseEvent");
+						evt.initMouseEvent("click",true,true,window,0,0,0,0,0,false,false,false,false,0,null);
+					}else{
+						 evt = new MouseEvent('click', {
 									'view': window,
 									'bubbles': true,
 									'cancelable': false
 							});
-							save.dispatchEvent(evt);
-							(window.URL || window.webkitURL).revokeObjectURL(save.href);
-				}	
+					}
+
+					save.dispatchEvent(evt);
+					(window.URL || window.webkitURL).revokeObjectURL(save.href);
+
+					if(navigator.userAgent.indexOf('MSIE')!==-1 || navigator.appVersion.indexOf('Trident/') > -1){
+						window.open(save.href);
+					}
+				}
 			}
 
 			// for IE < 11
