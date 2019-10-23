@@ -314,7 +314,7 @@
 		$repository_creation_date = $repository_date_exp[2].'-'.$repository_date_exp[1].'-'.$repository_date_exp[0].' '.$datetime_now_exp[1];
 		$repository_modification_date = $repository_creation_date;
 
-		if($repository_file_url == 'http://ttal.loc/documents/'){
+		if($repository_file_url == 'http://3.16.24.200/documents/'){
 			$repository_file_url = '';
 		}
 
@@ -617,7 +617,7 @@
 			$content = mysqli_fetch_array($result);
 			$pdf_link = $content["pdf_link"];
 			$pdf_to_remove = explode("documents",$pdf_link);
-            $root = ($_SERVER['SERVER_NAME'] == 'ttal.loc') ? '/' : '';
+            $root = ($_SERVER['SERVER_NAME'] == '3.16.24.200') ? '/' : '';
 			unlink($_SERVER['DOCUMENT_ROOT'].$root.'documents'.$pdf_to_remove[1]);
 		}
 

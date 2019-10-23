@@ -1,6 +1,6 @@
 <?php
 
-    $root = ($_SERVER['SERVER_NAME'] == 'ttal.loc') ? '/' : '';
+    $root = ($_SERVER['SERVER_NAME'] == '3.16.24.200') ? '/' : '';
 
     include_once $_SERVER["DOCUMENT_ROOT"].$root.'classes/general.php';
 	$translation = getTranslation($_SESSION['lang']);
@@ -8,7 +8,7 @@
 	$dm_repos_content = json_decode($_COOKIE['dm_repos'], true);
 
 	if(strpos($_SERVER['REQUEST_URI'], '/safety-sheets/') !== false) {
-	  $repository_set = getRepositorySet('http://ttal.loc'.$_SERVER['REQUEST_URI']);
+	  $repository_set = getRepositorySet('http://3.16.24.200'.$_SERVER['REQUEST_URI']);
 	  if($repository_set != 'not found'){
 	  	$dm_repos_content = explode(",",$repository_set);
 	  }

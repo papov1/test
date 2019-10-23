@@ -10,7 +10,7 @@ include_once 'src/contrib/Google_Oauth2Service.php';
  */
 $clientId = '230473965772-eomfj37mimvqgseqlo607f10p2b2vp1v.apps.googleusercontent.com'; //Google client ID
 $clientSecret = 'cWNwQIpBcn7usZAaXMODaakU'; //Google client secret
-$redirectURL = 'http://ttal.loc/pandora/'; //Callback URL
+$redirectURL = 'http://3.16.24.200/pandora/'; //Callback URL
 
 //Call Google API
 $gClient = new Google_Client();

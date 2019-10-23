@@ -1,5 +1,5 @@
 <?php session_start();
-    $root = ($_SERVER['SERVER_NAME'] == 'ttal.loc') ? '/' : '';
+    $root = ($_SERVER['SERVER_NAME'] == '3.16.24.200') ? '/' : '';
 	include_once $_SERVER["DOCUMENT_ROOT"].$root.'pandora/classes/general.php';
 
 	if (isset($_SESSION['admin_logged_in'])) {

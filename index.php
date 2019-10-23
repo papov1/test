@@ -1,6 +1,6 @@
 <?php session_start();
 
-$root = ($_SERVER['SERVER_NAME'] == 'ttal.loc') ? '/' : '';
+$root = ($_SERVER['SERVER_NAME'] == '3.16.24.200') ? '/' : '';
 
 include_once $_SERVER["DOCUMENT_ROOT"].$root.'classes/general.php';
 
@@ -15,7 +15,7 @@ else{
 }
 
 if(strpos($_SERVER['REQUEST_URI'], '/safety-sheets/') !== false) {
-	$repository_set = getRepositorySet('http://ttal.loc'.$_SERVER['REQUEST_URI']);
+	$repository_set = getRepositorySet('http://3.16.24.200'.$_SERVER['REQUEST_URI']);
 	if($repository_set != 'not found'){
 		$dm_repos_content = explode(",",$repository_set);
 		setcookie('dm_repos', json_encode($dm_repos_content), time() + (86400 * 30), "/");
@@ -32,7 +32,7 @@ $translation = getTranslation($_SESSION['lang']);
 
 <html>
 	<head>
-		<base href="http://ttal.loc">
+		<base href="http://3.16.24.200">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 		<title>SDB</title>
@@ -141,7 +141,7 @@ $translation = getTranslation($_SESSION['lang']);
 					<div class="logo_hover">
 						<div class="dmc_arrow_up"></div>
 						<div class="logo_hover_container">
-							<a href="http://ttal.loc/#suche" class="search_activate"><i class="pe-7s-search"></i> <?php echo $translation[54]; ?></a>
+							<a href="http://3.16.24.200/#suche" class="search_activate"><i class="pe-7s-search"></i> <?php echo $translation[54]; ?></a>
 							<a href="https://industrie.airliquide.at/" target="_blank"><i class="pe-7s-home"></i> <?php echo $translation[55]; ?></a>
 						</div>
 					</div>

@@ -325,7 +325,7 @@ $(document).ready(function () {
 
 					this.on("success", function() {
 						$('#temp_file_url').val(new_file_name);
-						$('#new_repository_links_new').val('http://ttal.loc/'+new_file_name);
+						$('#new_repository_links_new').val('http://3.16.24.200/'+new_file_name);
 						//console.log('file uploaded: '+new_file_name);
 					});
 
@@ -834,7 +834,7 @@ $(document).ready(function () {
 
 					this.on("success", function() {
 						$('#temp_file_url').val(new_file_name);
-						$('#new_repository_links_new').val('http://ttal.loc/documents/'+new_file_name);
+						$('#new_repository_links_new').val('http://3.16.24.200/documents/'+new_file_name);
 						//console.log('file uploaded: '+new_file_name);
 					});
 
@@ -873,7 +873,7 @@ $(document).ready(function () {
 		fileUploader.destroy();
 
 		if($('#temp_file_url').val() != ''){
-			var new_file_name = 'http://ttal.loc/documents/'+$('#temp_file_url').val();
+			var new_file_name = 'http://3.16.24.200/documents/'+$('#temp_file_url').val();
 		}
 		else{
 			var new_file_name = '';
@@ -1767,7 +1767,7 @@ $(document).ready(function () {
 
 						this.on("success", function() {
 							$('#temp_file_url').val(new_file_name);
-							$('#edit_repository_links_new').val('http://ttal.loc/documents/'+new_file_name);
+							$('#edit_repository_links_new').val('http://3.16.24.200/documents/'+new_file_name);
 							//console.log('file uploaded: '+new_file_name);
 
 							$.ajax({
@@ -1786,7 +1786,7 @@ $(document).ready(function () {
 								type: 'POST',
 								url: "/pandora/includes/pages/repository/ajax.php",
 								data: {
-									file_uploaded: 'http://ttal.loc/documents/'+new_file_name,
+									file_uploaded: 'http://3.16.24.200/documents/'+new_file_name,
 									edit_repository_item_id: repository_id
 								},
 								cache: false,

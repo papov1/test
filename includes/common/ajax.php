@@ -1,6 +1,6 @@
 <?php session_start();
 
-    $root = ($_SERVER['SERVER_NAME'] == 'ttal.loc') ? '/' : '';
+    $root = ($_SERVER['SERVER_NAME'] == '3.16.24.200') ? '/' : '';
 
     include_once $_SERVER["DOCUMENT_ROOT"].$root.'classes/general.php';
 
@@ -136,7 +136,7 @@
 			if($pdf_link != 'no pdf for this repository'){
 				updateRepositoryPdfDownloadCounter($dm_repo_id);
 
-				$file_path_exp = explode('http://ttal.loc/',$pdf_link);
+				$file_path_exp = explode('http://3.16.24.200/',$pdf_link);
 				$file_path = $_SERVER['DOCUMENT_ROOT'].$file_path_exp[1];
 
 				$files_to_zip[] = $file_path;
@@ -147,7 +147,7 @@
 
 		$result = create_zip($files_to_zip,$_SERVER['DOCUMENT_ROOT'].'downloads/sdb_export_'.$now_date.'.zip');
 		if($result == 'success'){
-			echo 'http://ttal.loc/downloads/sdb_export_'.$now_date.'.zip';
+			echo 'http://3.16.24.200/downloads/sdb_export_'.$now_date.'.zip';
 		}
 
 	}
@@ -221,7 +221,7 @@
 			if($pdf_link != 'no pdf for this repository'){
 				updateRepositoryPdfDownloadCounter($dm_repo_id);
 
-				$file_path_exp = explode('http://ttal.loc/',$pdf_link);
+				$file_path_exp = explode('http://3.16.24.200/',$pdf_link);
 				$file_path = $_SERVER['DOCUMENT_ROOT'].$file_path_exp[1];
 
 				$files_to_zip[] = $file_path;
@@ -1736,10 +1736,10 @@
 
 		$lang_iso = getLangIso($_POST["lang_id"]);
 		if($lang_iso != 'de'){
-			echo 'http://ttal.loc/'.$lang_iso;
+			echo 'http://3.16.24.200/'.$lang_iso;
 		}
 		else{
-			echo 'http://ttal.loc/';
+			echo 'http://3.16.24.200/';
 		}
 	}
 
